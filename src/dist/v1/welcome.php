@@ -10,7 +10,7 @@ use IOL\Welcome\v1\Entity\Ticket;
 $response = APIResponse::getInstance();
 
 $response->setAllowedRequestMethods(
-    new RequestMethod(RequestMethod::GET)
+    new RequestMethod(RequestMethod::GET + RequestMethod::POST)
 );
 $response->needsAuth(true);
 

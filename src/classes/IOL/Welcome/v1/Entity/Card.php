@@ -18,7 +18,7 @@ class Card
     public function register(string $serial, User $user): void
     {
         if (!ctype_xdigit($serial)) {
-            APIResponse::getInstance()->addError(0)->render();
+            APIResponse::getInstance()->addError(880003)->render();
         }
         $database = Database::getInstance();
         $database->insert(self::DB_TABLE, [
