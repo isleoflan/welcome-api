@@ -22,7 +22,7 @@ class Card
         }
         $database = Database::getInstance();
         $database->insert(self::DB_TABLE, [
-            'serial' => $serial,
+            'serial' => strtoupper($serial),
             'user_id' => $user->getId()
         ]);
     }
