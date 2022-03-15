@@ -44,7 +44,7 @@ class Order
         }
 
         $this->id = $values['id'];
-        $this->user = new User($values['user']);
+        $this->user = new User($values['user_id']);
         $this->created = $values['created'];
         $this->paymentMethod = $values['paymentMethod'];
         $this->voucher = $values['voucher'];
