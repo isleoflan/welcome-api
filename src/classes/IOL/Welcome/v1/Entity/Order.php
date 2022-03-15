@@ -52,7 +52,7 @@ class Order
 
         $database = Database::getInstance();
         $database->where('order_id', $this->id);
-        foreach($database->get(self::DB_TABLE) as $item){
+        foreach($database->get(OrderItem::DB_TABLE) as $item){
             $orderItem = new OrderItem();
             $orderItem->loadData($item);
             $this->addItem($orderItem);
