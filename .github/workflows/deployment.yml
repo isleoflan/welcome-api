@@ -87,8 +87,8 @@ jobs:
             ln -s "${{ secrets.DEPLOYMENTS_FOLDER }}/${{ steps.deployment-id.outputs.DEPLOYMENT_ID }}" live
             cd live
             date +"%y.%V.%u-%H%M" > classes/IOL/Welcome/v1/VERSION.vsf
-            mkdir"${{ secrets.BASE_PATH }}${{ secrets.DEPLOYMENTS_FOLDER }}/${{ steps.deployment-id.outputs.DEPLOYMENT_ID }}/i18n/"
-            mkdir"${{ secrets.BASE_PATH }}${{ secrets.DEPLOYMENTS_FOLDER }}/${{ steps.deployment-id.outputs.DEPLOYMENT_ID }}/i18n/errors/"
+            mkdir "${{ secrets.BASE_PATH }}${{ secrets.DEPLOYMENTS_FOLDER }}/${{ steps.deployment-id.outputs.DEPLOYMENT_ID }}/i18n/"
+            mkdir "${{ secrets.BASE_PATH }}${{ secrets.DEPLOYMENTS_FOLDER }}/${{ steps.deployment-id.outputs.DEPLOYMENT_ID }}/i18n/errors/"
             ln -s "${{ secrets.BASE_PATH }}${{ secrets.DEPLOYMENTS_FOLDER }}/${{ steps.deployment-id.outputs.DEPLOYMENT_ID }}/vendor/isleoflan/generic-classes/src/i18n/errors/en.json" "${{ secrets.BASE_PATH }}${{ secrets.DEPLOYMENTS_FOLDER }}/${{ steps.deployment-id.outputs.DEPLOYMENT_ID }}/i18n/errors/en.json"
       
       
