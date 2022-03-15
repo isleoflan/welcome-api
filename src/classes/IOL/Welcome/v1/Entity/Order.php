@@ -19,7 +19,7 @@ class Order
     private User $user;
     private Date $created;
     private string $paymentMethod;
-    private string $voucher;
+    private ?string $voucher;
     private string $status;
 
     private array $items = [];
