@@ -13,9 +13,6 @@
     "isleoflan/generic-classes": "*",
     "stui/statuspage-io": "*"
   },
-  "require-dev": {
-    "roave/security-advisories": "dev-latest"
-  },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
