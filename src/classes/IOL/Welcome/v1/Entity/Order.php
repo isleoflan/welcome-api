@@ -46,7 +46,7 @@ class Order
         $this->id = $values['id'];
         $this->user = new User($values['user_id']);
         $this->created = new Date($values['created']);
-        $this->paymentMethod = $values['paymentMethod'];
+        $this->paymentMethod = $values['payment_method'];
         $this->voucher = $values['voucher'];
         $this->status = $values['status'];
 
