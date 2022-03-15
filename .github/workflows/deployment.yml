@@ -80,7 +80,6 @@ jobs:
             rm -rf tests
             rm -rf vendor
             rm codeception.yml
-            rm *.pem
             composer install --no-dev
             cd ..
             rm "${{ secrets.BASE_PATH }}live"
