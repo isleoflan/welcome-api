@@ -37,7 +37,7 @@ class OrderItem
         }
 
         $this->id = $values['id'];
-        $this->product = new Product($values['product']);
+        $this->product = new Product($values['product_id']);
         $this->amount = $values['amount'];
     }
 
