@@ -20,14 +20,14 @@ if (APIResponse::getRequestMethod() === RequestMethod::GET) {
             'name' => 'ticketCode',
             'types' => ['string'],
             'required' => true,
-            'errorCode' => 105101,
+            'errorCode' => 880001,
         ]
     ]);
 
     try {
         $ticket = new Ticket($input['ticketCode']);
     } catch (\IOL\Generic\v1\Exceptions\IOLException) {
-        $response->addError(0)->render();
+        $response->addError(880101)->render();
     }
 
     $response->addData('user', $ticket->getUser()->serialize());
@@ -41,39 +41,39 @@ if (APIResponse::getRequestMethod() === RequestMethod::POST) {
             'name' => 'ticketCode',
             'types' => ['string'],
             'required' => true,
-            'errorCode' => 105101,
+            'errorCode' => 880001,
         ],
         [
             'name' => 'identification',
             'types' => ['boolean'],
             'required' => true,
-            'errorCode' => 105101,
+            'errorCode' => 880002,
         ],
         [
             'name' => 'badgeSerialNumber',
             'types' => ['string'],
             'required' => true,
-            'errorCode' => 105101,
+            'errorCode' => 880003,
         ],
         [
             'name' => 'merch',
             'types' => ['boolean'],
             'required' => true,
-            'errorCode' => 105101,
+            'errorCode' => 88000,
         ]
     ]);
 
     try {
         $ticket = new Ticket($input['ticketCode']);
     } catch (\IOL\Generic\v1\Exceptions\IOLException) {
-        $response->addError(0)->render();
+        $response->addError(880101)->render();
     }
 
     if (!$input['identification']) {
-        $response->addError(0)->render();
+        $response->addError(880102)->render();
     }
     if (!$input['merch']) {
-        $response->addError(0)->render();
+        $response->addError(880103)->render();
     }
 
     $card = new Card();
