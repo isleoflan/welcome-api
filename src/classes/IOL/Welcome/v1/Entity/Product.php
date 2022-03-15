@@ -11,7 +11,7 @@ use IOL\Generic\v1\Exceptions\NotFoundException;
 
 class Product
 {
-    public const DB_TABLE = 'order_items';
+    public const DB_TABLE = 'products';
 
     private string $id;
     private int $categoryId;
@@ -34,7 +34,7 @@ class Product
     public function loadData(array|false $values): void
     {
         if (!$values || count($values) === 0) {
-            throw new NotFoundException('User could not be loaded');
+            throw new NotFoundException('Product could not be loaded');
         }
 
         $this->id = $values['id'];
