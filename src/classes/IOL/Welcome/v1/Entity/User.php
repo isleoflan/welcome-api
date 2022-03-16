@@ -60,8 +60,8 @@ class User
     #[ArrayShape([
         'username' => "string",
         'gender' => "string",
-        'foreName' => "string",
-        'lastName' => "string",
+        'forename' => "string",
+        'lastname' => "string",
         'address' => "string",
         'zipCode' => "int",
         'city' => "string",
@@ -72,8 +72,8 @@ class User
         return [
             'username' => $this->username,
             'gender' => $this->gender->getValue(),
-            'foreName' => $this->foreName,
-            'lastName' => $this->lastName,
+            'forename' => $this->foreName,
+            'lastname' => $this->lastName,
             'address' => $this->address,
             'zipCode' => $this->zipCode,
             'city' => $this->city,
