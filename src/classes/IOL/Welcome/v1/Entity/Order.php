@@ -16,7 +16,7 @@ class Order
     public const DB_TABLE = 'orders';
 
     private string $id;
-    private User $user;
+    private string $user;
     private Date $created;
     private string $paymentMethod;
     private ?string $voucher;
@@ -44,7 +44,7 @@ class Order
         }
 
         $this->id = $values['id'];
-        $this->user = new User($values['user_id']);
+        $this->user = $values['user_id'];
         $this->created = new Date($values['created']);
         $this->paymentMethod = $values['payment_method'];
         $this->voucher = $values['voucher'];
