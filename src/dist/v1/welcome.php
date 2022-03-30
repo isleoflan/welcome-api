@@ -59,7 +59,7 @@ if (APIResponse::getRequestMethod() === RequestMethod::POST) {
             'name' => 'merch',
             'types' => ['boolean'],
             'required' => true,
-            'errorCode' => 88000,
+            'errorCode' => 880004,
         ]
     ]);
 

@@ -17,6 +17,7 @@ class Card
 
     public function register(string $serial, User $user): void
     {
+        $serial = str_replace([' ',':'], '',$serial);
         if (!ctype_xdigit($serial)) {
             APIResponse::getInstance()->addError(880003)->render();
         }
