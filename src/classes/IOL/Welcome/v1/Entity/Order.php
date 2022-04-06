@@ -69,7 +69,7 @@ class Order
         $return = [];
         foreach($this->items as $item) {
             /** @var OrderItem $item */
-            if($item->getProduct()->getCategoryId() === 4) {
+            if(in_array($item->getProduct()->getCategoryId(), [4, 5, 2])) {
                 $return[] = $item->getAmount() . 'x ' . $item->getProduct()->getTitle();
             }
         }
